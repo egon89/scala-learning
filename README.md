@@ -33,13 +33,36 @@ sbt
 ## The REPL
 Running `scala` command in the terminal.
 
+## Variables and Data Types
+> In Scala, everything is an object.
+
+| Type | Description |
+| --- | --- |
+| val | Immutable - like final in Java |
+| var | Mutable |
+
+### Declaring variable types
+```scala
+val x: Int = 1
+val x = 1
+val nums: List[Int] = List(1,2,3)
+val nums = List(1,2,3)
+```
+
+### Built-in data types
+- The `Int` and `Double`are the default numeric type
+- We can use `L`, `D` and `F` to specify that they are _Long_, _Double_ and _Float_
+- For **large numbers**, use `BigInt`and `BigDecimal` types
+  - Use `BigDecimal` for precise arithmetic
+
+
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
 - [ ] A Taste of Scala
   - [x] Hello, World!
   - [x] The REPL
-  - [ ] Variables and Data Types
-    - [ ] Two types of variables
-    - [ ] Declaring variable types
-    - [ ] Built-in data types
+  - [x] Variables and Data Types
+    - [x] Two types of variables
+    - [x] Declaring variable types
+    - [x] Built-in data types
