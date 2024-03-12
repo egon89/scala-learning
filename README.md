@@ -56,6 +56,29 @@ val nums = List(1,2,3)
   - Use `BigDecimal` for precise arithmetic
 
 
+## Control Structures
+- All Scala control structures can be used as expression
+  - An expression returns a result
+  ```scala
+  val conditionalResult = if a < b then a else b
+  ```
+### for loops and expressions
+```scala
+  for
+    i <- ints // generator
+    if i > 2  // guard
+  do          // body
+    println(i)
+  ```
+  - Prints all numbers of ints greater than 2
+  - We can have multiple generators and guards
+
+We can yield the result using the keyword `yield`instead of `do`
+  - it works like a map in Java
+```scala
+val doubleList = for i <- ints yield i * 2
+```
+
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
@@ -66,3 +89,7 @@ val nums = List(1,2,3)
     - [x] Two types of variables
     - [x] Declaring variable types
     - [x] Built-in data types
+  - [x] Control Structures
+    - [x] if/else
+    - [x] for loops and expressions
+

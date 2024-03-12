@@ -1,5 +1,5 @@
 
-@main def builtInDataTypes(): Unit =
+def builtInDataTypes(): Unit =
     println("Built-in data types")
     val b: Byte = 1
     val i: Int = 1
