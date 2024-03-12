@@ -30,9 +30,16 @@ sbt
 ~~~
 ![First execution](./docs/images/first_execution.png)
 
+## The REPL
+Running `scala` command in the terminal.
 
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
-- [ ] Scala Features
-  - [ ] High-level features
+- [ ] A Taste of Scala
+  - [x] Hello, World!
+  - [x] The REPL
+  - [ ] Variables and Data Types
+    - [ ] Two types of variables
+    - [ ] Declaring variable types
+    - [ ] Built-in data types
