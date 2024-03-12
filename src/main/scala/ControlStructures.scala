@@ -1,3 +1,4 @@
+import java.io.IOException
 
 @main def controlStructures(): Unit =
     println("# if/else")
@@ -63,6 +64,8 @@
     println(s"hello is ${getClassAsString("hello")}")
     println(s"List(1,2,3) is ${getClassAsString(List(1,2,3))}")
 
+    println()
+    exceptionExample()
 
 def matchExample(): Unit =
     val matchVariable = 1
@@ -88,7 +91,6 @@ def matchExample(): Unit =
             println("Bam Bam!")
         case _ =>
             println("Another one")
-        
 
 def getClassAsString(x: Matchable): String =
     x match
@@ -98,5 +100,18 @@ def getClassAsString(x: Matchable): String =
         case l: List[?] => "List"
         case _ => "Unknow"
 
+def exceptionExample(): Unit =
+    println("# Exception example")
+    try
+        throwAnException(1)
+    catch
+        case ioe: IOException => println("IO Exception")
+        case iae: IllegalArgumentException => println("Illegal Argument Exception")
+    finally
+        println("finally called!") 
 
-
+def throwAnException(x: Int): Unit =
+    x match
+        case 1 => throw new IOException()
+        case 2 => throw new IllegalArgumentException()
+        case _ => println("without exception")

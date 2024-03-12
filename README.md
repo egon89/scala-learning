@@ -83,6 +83,9 @@ val doubleList = for i <- ints yield i * 2
 - It works like the switch in Java
 - It's an expression, so we can get the result
 
+### try/catch/finally
+- The catch uses the match pattern to handle exceptions
+
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
@@ -97,4 +100,5 @@ val doubleList = for i <- ints yield i * 2
     - [x] if/else
     - [x] for loops and expressions
     - [x] match expressions
+    - [x] try/catch/finally
 
