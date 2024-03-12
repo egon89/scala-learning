@@ -54,14 +54,49 @@
         yield
             println(f)
             f.length
-    
     println(s"fruitLengths: $fruitLengths")
 
+    println("# match")
+    matchExample()
+    println(s"1 is ${getClassAsString(1)}")
+    println(s"1.99 is ${getClassAsString(1.99)}")
+    println(s"hello is ${getClassAsString("hello")}")
+    println(s"List(1,2,3) is ${getClassAsString(List(1,2,3))}")
 
 
+def matchExample(): Unit =
+    val matchVariable = 1
+    matchVariable match
+        case 1 => println("one")
+        case 2 => println("two")
+        case _ => println("another")
 
+    // match is an expression, so we can get the result
+    val matchResult = matchVariable match
+        case 1 => "one"
+        case 2 => "two"
+        case _ => "another"
+    println(s"matchResult is $matchResult")
 
+    // the match can be used to test a variable against many different types of patterns
+    case class Person(name: String)
+    val p = Person("Fred")
+    p match
+        case Person(name) if name == "Fred" =>
+            println("Fred!")
+        case Person(name) if name == "Bam Bam" =>
+            println("Bam Bam!")
+        case _ =>
+            println("Another one")
+        
 
+def getClassAsString(x: Matchable): String =
+    x match
+        case s: String => "String"
+        case i: Integer => "Integer"
+        case d: Double => "Double"
+        case l: List[?] => "List"
+        case _ => "Unknow"
 
 
 

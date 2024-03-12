@@ -79,6 +79,10 @@ We can yield the result using the keyword `yield`instead of `do`
 val doubleList = for i <- ints yield i * 2
 ```
 
+### match
+- It works like the switch in Java
+- It's an expression, so we can get the result
+
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
@@ -92,4 +96,5 @@ val doubleList = for i <- ints yield i * 2
   - [x] Control Structures
     - [x] if/else
     - [x] for loops and expressions
+    - [x] match expressions
 
