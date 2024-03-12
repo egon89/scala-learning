@@ -67,6 +67,9 @@ import java.io.IOException
     println()
     exceptionExample()
 
+    println()
+    whileExample()
+
 def matchExample(): Unit =
     val matchVariable = 1
     matchVariable match
@@ -115,3 +118,12 @@ def throwAnException(x: Int): Unit =
         case 1 => throw new IOException()
         case 2 => throw new IllegalArgumentException()
         case _ => println("without exception")
+
+def whileExample(): Unit =
+    var j = 0
+    println("# while example")
+    while
+        j < 3
+    do
+        println(j)
+        j += 1
