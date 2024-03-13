@@ -86,6 +86,35 @@ val doubleList = for i <- ints yield i * 2
 ### try/catch/finally
 - The catch uses the match pattern to handle exceptions
 
+## Domain Modeling
+### Object-oriented programming (OOP)
+#### Traits
+```mermaid
+graph LR;
+  A[Traits]-->B[Can be used as interfaces]
+  A[Traits]-->C[Abstract methods];
+  A-->D[Concrete methods<br />and fields];
+```
+
+Abstract field:
+```scala
+trait Pet:
+    val name: String // abstract field
+
+// the abstract name field is implemented in the constructor
+class Dog(val name: String) extends Pet
+```
+Abstract method:
+> The **name** field is different from the abstract **name** field of the Pet
+```scala
+trait Speaker:
+    def speak(): String // abstract (no body)
+
+class Dog(name: String) extends Speaker
+  def speak(): String = "Woof!"
+```
+
+
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
@@ -101,4 +130,7 @@ val doubleList = for i <- ints yield i * 2
     - [x] for loops and expressions
     - [x] match expressions
     - [x] try/catch/finally
+  - [ ] Domain Modeling
+    - [x] OOP Domain Modeling
+    - [ ] FP Domain Modeling
 

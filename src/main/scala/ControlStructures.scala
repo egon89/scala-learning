@@ -1,6 +1,6 @@
 import java.io.IOException
 
-@main def controlStructures(): Unit =
+def controlStructures(): Unit =
     println("# if/else")
     val x = 0
     if x < 0 then
