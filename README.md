@@ -114,6 +114,40 @@ class Dog(name: String) extends Speaker
   def speak(): String = "Woof!"
 ```
 
+## Functional Programming Domain Modeling (FP)
+
+### Algebraic Data Types (ADTs)
+Describes data types in terms of algebraic operations. In Scala, ADTs are commonly expressed using case classes, sealed traits and enumerations.
+
+#### Sum Types (or Tagged Unions)
+- Sum types represent a choice between multiple alternatives
+- **Pattern matching** is a powerful tool for working with ADTs in Scala, allowing you to destructure data and handle each case separately
+
+```scala
+sealed trait Shape
+case class Circle(radius: Double) extends Shape
+case class Rectangle(width: Double, height: Double) extends Shape
+
+def area(shape: Shape): Double = shape match {
+  case Circle(radius) => math.Pi * radius * radius
+  case Rectangle(width, height) => width * height
+}
+
+val circle = Circle(5.0)
+val rectangle = Rectangle(3.0, 4.0)
+
+println(area(circle))     // Output: 78.53981633974483
+println(area(rectangle))  // Output: 12.0
+```
+
+#### Product Types
+- Only has one shape
+- In Scala, product types are commonly represented using case classes (immutable)
+
+```scala
+case class Point(x: Double, y: Double)
+```
+
 
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
