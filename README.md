@@ -148,6 +148,27 @@ println(area(rectangle))  // Output: 12.0
 case class Point(x: Double, y: Double)
 ```
 
+##### Case Classes
+A case class has all of the features of a regular class, but also has some additional features that make them particularly useful for modeling data.
+
+When you define a case class, Scala automatically generates a number of useful methods for you, including:
+
+```mermaid
+mindmap
+  root((case class))
+    Constructor
+      Parameters are public val fields by default
+    Methods
+      unapply
+        use case classes in more ways in match expressions
+      copy
+        create a new instance with modified fields without changing the original
+      equals and hashCode
+        structural equality
+      toString
+        human-readable string representation
+```
+
 
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
@@ -164,7 +185,7 @@ case class Point(x: Double, y: Double)
     - [x] for loops and expressions
     - [x] match expressions
     - [x] try/catch/finally
-  - [ ] Domain Modeling
+  - [x] Domain Modeling
     - [x] OOP Domain Modeling
-    - [ ] FP Domain Modeling
+    - [x] FP Domain Modeling
 
