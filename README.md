@@ -169,6 +169,11 @@ mindmap
         human-readable string representation
 ```
 
+## Methods
+### extension
+- We can define one or more extension methods on the parameter that's put in parentheses
+- Allow you to add new methods to existing classes without modifying their source code
+  - useful when you want to extend the functionality from classes/libraries that you don't have control over
 
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
@@ -188,4 +193,4 @@ mindmap
   - [x] Domain Modeling
     - [x] OOP Domain Modeling
     - [x] FP Domain Modeling
-
+  - [x] Methods
