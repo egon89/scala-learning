@@ -175,6 +175,21 @@ mindmap
 - Allow you to add new methods to existing classes without modifying their source code
   - useful when you want to extend the functionality from classes/libraries that you don't have control over
 
+
+## First-Class Functions
+- Lambdas (anonymous functions)
+- High-order functions (HOFs)
+  - the **map** method of the **List** is an example of a HOF. A function that takes a function as parameter
+
+### Immutable collections in the standard library
+  - List
+  - Vector
+  - Map
+  - Set
+
+When we use functions in these immutable collections and classes they return a new collection with the result of the operation, without modifying the original collection.
+
+
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
@@ -194,3 +209,5 @@ mindmap
     - [x] OOP Domain Modeling
     - [x] FP Domain Modeling
   - [x] Methods
+  - [x] First-Class Functions
+    - [x] Immutable collections
