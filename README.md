@@ -190,6 +190,14 @@ mindmap
 When we use functions in these immutable collections and classes they return a new collection with the result of the operation, without modifying the original collection.
 
 
+## Singleton Objects
+### Utility Methods
+The `object` keyword creates a Singleton object (a class that has exactly one instance)
+
+- We can use to create a class with a collection of utility methods
+  - its methods can be accessed like `static` methods in Java 
+
+
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
@@ -211,3 +219,7 @@ When we use functions in these immutable collections and classes they return a n
   - [x] Methods
   - [x] First-Class Functions
     - [x] Immutable collections
+  - [ ] Singleton objects
+    - [x] Utility methods
+    - [ ] Companion objects
+    - [ ] Create modules from traits
