@@ -33,6 +33,16 @@ object MathUtils:
     def subtract(x: Int, y: Int): Int = x - y
 
 
+// creating modules from traits
+trait AddService:
+    def add(a: Int, b: Int) = a + b
+
+trait MultiplyService:
+    def multiply(a: Int, b: Int) = a * b
+
+object MathService extends AddService, MultiplyService
+
+
 def singletonObjectsRunner(): Unit =
     println("singleton objects runner")
 
@@ -60,3 +70,8 @@ def singletonObjectsRunner(): Unit =
     // accessing the static methods
     println(MathUtils.add(5, 5))        // 10
     println(MathUtils.subtract(10, 2))  // 8
+
+    // create modules from traits
+    println(MathService.add(10, 2))     // 12
+    println(MathService.multiply(2, 2)) // 4
+    

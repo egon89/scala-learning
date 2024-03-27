@@ -191,9 +191,9 @@ When we use functions in these immutable collections and classes they return a n
 
 
 ## Singleton Objects
-### Utility Methods
 The `object` keyword creates a Singleton object (a class that has exactly one instance)
 
+### Utility Methods
 - We can use to create a class with a collection of utility methods
   - its methods can be accessed like `static` methods in Java 
 
@@ -214,6 +214,17 @@ Companion objects are commonly used for:
     ```scala
     MathUtils.add(5, 5) // 10
     ```
+
+### Creating modules from traits
+Objects can also be used to **implement** traits to create modules
+
+```scala
+// combines two traits to create a concrete object
+MathService extends TraitA, TraitB
+
+MathService.traitAMethod()
+MathService.traitBMethod()
+```
 
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
@@ -236,7 +247,7 @@ Companion objects are commonly used for:
   - [x] Methods
   - [x] First-Class Functions
     - [x] Immutable collections
-  - [ ] Singleton objects
+  - [x] Singleton objects
     - [x] Utility methods
     - [x] Companion objects
-    - [ ] Create modules from traits
+    - [x] Create modules from traits
