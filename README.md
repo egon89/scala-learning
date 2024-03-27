@@ -197,6 +197,23 @@ The `object` keyword creates a Singleton object (a class that has exactly one in
 - We can use to create a class with a collection of utility methods
   - its methods can be accessed like `static` methods in Java 
 
+### Companion objects
+- It's an object that shares the same name as a class and is defined in the same file
+- It can access private members of the class
+  - the companion object and its corresponding class can access each other's private members
+
+Companion objects are commonly used for:
+- Factory methods
+- Static Methods
+  - we create `static methods` directly within the companion object (not in a class)
+    ```scala
+    object MathUtils:
+      def add(x: Int, y: Int): Int = x + y
+    ```
+  - these methods can be accessed without creating an instance of the class
+    ```scala
+    MathUtils.add(5, 5) // 10
+    ```
 
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
@@ -221,5 +238,5 @@ The `object` keyword creates a Singleton object (a class that has exactly one in
     - [x] Immutable collections
   - [ ] Singleton objects
     - [x] Utility methods
-    - [ ] Companion objects
+    - [x] Companion objects
     - [ ] Create modules from traits
