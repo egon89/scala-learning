@@ -226,6 +226,17 @@ MathService.traitAMethod()
 MathService.traitBMethod()
 ```
 
+## Collections
+```mermaid
+graph LR;
+  C[Collections]-->I[Immutable]
+  C-->M[Mutable];
+  I-->L(List</br><i>linked list is the</br>default implementation</i>);
+```
+
+- **List methods** are functional methods
+  - they don't mutate the original collection, but instead return a new collection with the updated elements
+
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
@@ -251,3 +262,9 @@ MathService.traitBMethod()
     - [x] Utility methods
     - [x] Companion objects
     - [x] Create modules from traits
+  - [ ] Collections
+    - [x] Creating lists
+    - [ ] List methods
+
+## Others
+- [allaboutscala.com](https://allaboutscala.com/)
