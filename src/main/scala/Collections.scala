@@ -91,3 +91,23 @@ def collectionsRunner(): Unit =
     // foldLeft has an initial seed value
     val foldLeft = firstTen.foldLeft(100)(_ + _)
     println(s"foldLeft: $foldLeft")
+
+    tupleRunner()
+
+
+def tupleRunner(): Unit = 
+    println("> Tuples")
+
+    val t = (11, "eleven", ClassNumber("Eleven"))
+    println(s"t0: ${t(0)}")             // t0: 11
+    println(s"t0: ${t(1)}")             // t1: eleven
+    println(s"t0: ${t(2)}")             // t2: ClassNumber(Eleven)
+
+    // using extractor approach
+    val (num, str, cn) = t
+    println(s"num: $num")               // num: 11
+    println(s"str: $str")               // str: eleven
+    println(s"classNumber: $cn")        // classNumber: ClassNumber(Eleven)
+
+
+case class ClassNumber(name: String)

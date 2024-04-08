@@ -237,6 +237,18 @@ graph LR;
 - **List methods** are functional methods
   - they don't mutate the original collection, but instead return a new collection with the updated elements
 
+### Tuples
+- A tuple is a collection of elements that can have different types
+
+```scala
+// Tuple with three elements
+val t = (11, "eleven", ClassNumber("Eleven"))
+
+// extractor/destructuring approach
+val (num, str, cn) = t
+```
+
+
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
@@ -262,9 +274,10 @@ graph LR;
     - [x] Utility methods
     - [x] Companion objects
     - [x] Create modules from traits
-  - [ ] Collections
+  - [x] Collections
     - [x] Creating lists
-    - [ ] List methods
+    - [x] List methods
+    - [x] Tuples
 
 ## Others
 - [allaboutscala.com](https://allaboutscala.com/)
