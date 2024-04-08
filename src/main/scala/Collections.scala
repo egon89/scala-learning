@@ -54,3 +54,40 @@ def collectionsRunner(): Unit =
 
     val takeWhile = nums.takeWhile(_ < 30)
     println(s"takeWhile: $takeWhile")   // takeWhile: List(10, 20)
+
+    // flatten
+    val flatten = List(List(1,2), List(3,4)).flatten
+    println(s"flatten: $flatten")       // flatten: List(1, 2, 3, 4)
+
+    val numberStringList = List("one", "two")
+
+    // map
+    val map = numberStringList.map(_.toUpperCase)
+    println(s"map: $map")               // map: List(ONE, TWO)
+    val map2 = numberStringList.map(value => value.toUpperCase())
+    println(s"map2: $map2")             // map: List(ONE, TWO)
+
+    // flatMap
+    val flatMap = numberStringList.flatMap(_.toUpperCase)
+    println(s"flatMap: $flatMap")       // flatMap: List(O, N, E, T, W, O)
+
+    val firstTen = (1 to 10).toList
+    // sum the list of integers
+    val sum = firstTen.reduceLeft(_ + _)
+    println(s"sum: $sum")               // sum: 55
+
+    val sum2 = firstTen.reduceLeft((a, b) => a + b)
+    println(s"sum2: $sum2")             // sum2: 55
+
+    // find the minimum element
+    val h = List(3, 10, 8, 9, 2, 1, 7)
+    val min = h.reduceLeft(_ min _)
+    println(s"min: $min")               // min: 1
+
+    // find the maximum element
+    val max = h.reduceLeft(_ max _)
+    println(s"max: $max")               // max: 10
+    
+    // foldLeft has an initial seed value
+    val foldLeft = firstTen.foldLeft(100)(_ + _)
+    println(s"foldLeft: $foldLeft")
