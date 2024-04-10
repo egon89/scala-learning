@@ -304,6 +304,7 @@ val (num, str, cn) = t
 - [ ] A First Look at Types
   - [x] All values have a type
   - [x] Scala type hierarchy
+  - [x] Strings
 
 ## Others
 - [allaboutscala.com](https://allaboutscala.com/)
