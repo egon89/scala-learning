@@ -248,11 +248,34 @@ val t = (11, "eleven", ClassNumber("Eleven"))
 val (num, str, cn) = t
 ```
 
+# A first look at types
+## All values have a type
+![Scala types](./docs/images/scala_types.png)
+
+- `Any`
+  - the supertype (**top type**)
+  - It has the universal methods `equals`, `hashCode` and `toString`
+- `Matchable`
+  - Mark all types that we can perform **pattern matching**
+    - property call _parametricity_
+- `AnyVal`
+  - It represents value types
+  - Non-nullable
+  - `Double`, `Float`, `Long`, `Int`, `Short`, `Byte`, `Char`, `Unit`, and `Boolean`
+    - `Unit` is a value type which carries no meaningful information
+    - `Unit` corresponds to `void`
+- `AnyRef`
+  - It represents references types
+  - All **non-value** types are defined as reference types
+  - Every _user-defined type_ in Scala is a subtype of `AnyRef`
+  - `AnyRef` corresponds to `java.lang.Object`
+
+
 
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
 
-- [ ] A Taste of Scala
+- [X] A Taste of Scala
   - [x] Hello, World!
   - [x] The REPL
   - [x] Variables and Data Types
@@ -278,6 +301,9 @@ val (num, str, cn) = t
     - [x] Creating lists
     - [x] List methods
     - [x] Tuples
+- [ ] A First Look at Types
+  - [x] All values have a type
+  - [x] Scala type hierarchy
 
 ## Others
 - [allaboutscala.com](https://allaboutscala.com/)
