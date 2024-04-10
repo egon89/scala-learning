@@ -270,7 +270,9 @@ val (num, str, cn) = t
   - Every _user-defined type_ in Scala is a subtype of `AnyRef`
   - `AnyRef` corresponds to `java.lang.Object`
 
-
+## Type casting
+Value types can be cast in the following way:
+![Type casting](./docs/images/type-casting-diagram.png)
 
 ## Road Map
 > [Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html)
@@ -305,6 +307,7 @@ val (num, str, cn) = t
   - [x] All values have a type
   - [x] Scala type hierarchy
   - [x] Strings
+  - [x] Type casting
 
 ## Others
 - [allaboutscala.com](https://allaboutscala.com/)
