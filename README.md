@@ -303,11 +303,12 @@ Value types can be cast in the following way:
     - [x] Creating lists
     - [x] List methods
     - [x] Tuples
-- [ ] A First Look at Types
+- [x] A First Look at Types
   - [x] All values have a type
   - [x] Scala type hierarchy
   - [x] Strings
   - [x] Type casting
+- [x] String interpolation
 
 ## Others
 - [allaboutscala.com](https://allaboutscala.com/)
